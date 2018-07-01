@@ -1,0 +1,22 @@
+﻿<Window x:Class="Messure.Scales"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Messure"
+        mc:Ignorable="d"
+        Title="MainWindow"  Height="450" Width="800" WindowState="Minimized" ResizeMode="NoResize" ShowInTaskbar="False" WindowStyle="None" Topmost="True">
+    <Grid RenderTransformOrigin="0.5,0.5">
+        <Image x:Name="faceImage" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Center" Source="Assets/ScalesFace.png"/>
+        <Image x:Name="handImage" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="0.5, 0.103" Source="Assets/ScalesHand.png" Canvas.ZIndex="1" Margin="797,477,797,0" Width="86">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform x:Name="transform"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+    </Grid>
+</Window>
